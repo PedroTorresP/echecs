@@ -1,0 +1,25 @@
+Grischuk;Alexander;RUS;2772
+Giri;Anish;NED;2752
+Li;Chao b;CHN;2732
+Navara;David;CZE;2740
+Jakovenko;Dmitry;RUS;2730
+Caruana;Fabiano;USA;2799
+Nakamura;Hikaru;USA;2781
+Aronian;Levon;ARM;2805
+Ding;Liren;CHN;2777
+Carlsen;Magnus;NOR;2837
+Matlakov;Maxim;RUS;2735
+Vachier-Lagrave;Maxime;FRA;2789
+Harikrishna;P.;IND;2744
+Svidler;Peter;RUS;2765
+Le;Quang Liem;VIE;2737
+Wojtaszek;Radoslaw;POL;2736
+Karjakin;Sergey;RUS;2760
+Mamedyarov;Shakhriyar;AZE;2799
+Radjabov;Teimour;AZE;2748
+Topalov;Veselin;FID;2749
+Anand;Viswanathan;IND;2782
+Kramnik;Vladimir;RUS;2787
+So;Wesley;USA;2788
+Yu;Yangyi;CHN;2751
+Wei;Yi;CHN;2743
