@@ -207,6 +207,7 @@ public class FrmNouveau extends java.awt.Frame {
         String prenom = tfPrenom.getText();
         String nationalite = tfNationalite.getText();
         int points = Integer.parseInt(tfPoints.getText());
+        int age = Integer.parseInt(tfAge.getText());
         Joueur joueur = new Joueur(nom,prenom,nationalite,points);
         mainWin.retourne(joueur);
     }//GEN-LAST:event_btnEnregistrerActionPerformed
