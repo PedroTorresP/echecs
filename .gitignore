@@ -1,3 +1,4 @@
 # exclure tout les .class sauf dans la librairie
 !/Echecs/Lib/outils/*.class
 *.class
+/Echecs/nbproject/private/
