@@ -3,7 +3,9 @@ package elo;
 public class Joueur implements Comparable {
     
     private String nom, prenom, nationalite;
+
     private int pointsElo;
+
     
     public Joueur (String nom, String prenom, String nationalite, int pointsElo) { this.nom=nom; this.prenom=prenom; this.nationalite=nationalite; this.pointsElo=pointsElo; }
     
@@ -25,5 +27,7 @@ public class Joueur implements Comparable {
     
     public String toString() {return pointsElo+" : "+nom+" "+prenom+" - "+nationalite;}
     
+
     public String toText() {return nom+";"+prenom+";"+nationalite+";"+pointsElo;}
+
 }
