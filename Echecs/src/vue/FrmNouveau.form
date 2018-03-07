@@ -193,6 +193,9 @@
       </Properties>
     </Component>
     <Component class="java.awt.TextField" name="tfAge">
+      <Events>
+        <EventHandler event="textValueChanged" listener="java.awt.event.TextListener" parameters="java.awt.event.TextEvent" handler="tfAgeTextValueChanged"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

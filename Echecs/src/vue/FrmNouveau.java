@@ -120,6 +120,12 @@ public class FrmNouveau extends java.awt.Frame {
 
         lblAge.setText("Age");
 
+        tfAge.addTextListener(new java.awt.event.TextListener() {
+            public void textValueChanged(java.awt.event.TextEvent evt) {
+                tfAgeTextValueChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -253,6 +259,10 @@ public class FrmNouveau extends java.awt.Frame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_formWindowClosing
+
+    private void tfAgeTextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_tfAgeTextValueChanged
+        valide();
+    }//GEN-LAST:event_tfAgeTextValueChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
