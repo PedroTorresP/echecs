@@ -3,7 +3,7 @@ package elo;
 public class Joueur implements Comparable {
     
     private String nom, prenom, nationalite;
-    private int points;
+    private int pointsDuJoueur;
     
     public Joueur (String nom, String prenom, String nationalite, int points) { this.nom=nom; this.prenom=prenom; this.nationalite=nationalite; this.points=points; }
     
