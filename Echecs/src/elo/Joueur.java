@@ -3,11 +3,12 @@ package elo;
 public class Joueur implements Comparable {
     
     private String nom, prenom, nationalite;
-    private int points;
+    private int pointsElo;
     
-    public Joueur (String nom, String prenom, String nationalite, int points) { this.nom=nom; this.prenom=prenom; this.nationalite=nationalite; this.points=points; }
+    public Joueur (String nom, String prenom, String nationalite, int pointsElo) { this.nom=nom; this.prenom=prenom; this.nationalite=nationalite; this.pointsElo=pointsElo; }
     
-    public int getPoints() {return points;}
+    
+    public int getPoints() {return pointsElo;}
     
     public String getNom() {return nom;}
     
@@ -18,11 +19,11 @@ public class Joueur implements Comparable {
      */
     public int compareTo (Object j) {
         int pointsJ = ((Joueur)j).getPoints();
-        if (points>pointsJ) {return 1;}
+        if (pointsElo>pointsJ) {return 1;}
         return 0;
     }
     
-    public String toString() {return points+" : "+nom+" "+prenom+" - "+nationalite;}
+    public String toString() {return pointsElo+" : "+nom+" "+prenom+" - "+nationalite;}
     
-    public String toText() {return nom+";"+prenom+";"+nationalite+";"+points;}
+    public String toText() {return nom+";"+prenom+";"+nationalite+";"+pointsElo;}
 }
