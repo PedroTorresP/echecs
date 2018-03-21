@@ -28,79 +28,37 @@ public class EchecsDao {
     private static ArrayList lst = new ArrayList();
     
     public static ArrayList readEchec() {
-        try{
-        
-        CSVReader reader = new CSVReader(new FileReader("Joueurs.csv"), '\n', ';');
         String [] nextLine;
+        try{
+        CSVReader reader = new CSVReader(new FileReader("Joueurs.csv"), '\n','\r','"');
+        
         while ((nextLine = reader.readNext()) != null) {
         // nextLine[] is an array of values from the line
-        System.out.println(nextLine[0] + nextLine[1] + "etc...");
-     }
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        
-        
-        
-        
-        //La lecture du fichier est à corriger
-        /*String[] txt = new String[25];
-        try {
-        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        InputStream is = classloader.getResourceAsStream("Joueurs.txt");
-        InputStreamReader streamReader = new InputStreamReader(is, StandardCharsets.UTF_8);
-        BufferedReader in = new BufferedReader(streamReader);
-        String line; int i=0;
-        while((line = in.readLine()) != null)
-        {
-            txt[i] = line;
-        }
-        in.close();
-        } catch (IOException e) {
-            System.out.println("Fichier introuvable !");
-        }*/
-        
-        //variable str pour tester si ça fonctionne
-        String str = "Grischuk;Alexander;RUS;2772\n" +
-"Giri;Anish;NED;2752\n" +
-"Li;Chao b;CHN;2732\n" +
-"Navara;David;CZE;2740\n" +
-"Jakovenko;Dmitry;RUS;2730\n" +
-"Caruana;Fabiano;USA;2799\n" +
-"Nakamura;Hikaru;USA;2781\n" +
-"Aronian;Levon;ARM;2805\n" +
-"Ding;Liren;CHN;2777\n" +
-"Carlsen;Magnus;NOR;2837\n" +
-"Matlakov;Maxim;RUS;2735\n" +
-"Vachier-Lagrave;Maxime;FRA;2789\n" +
-"Harikrishna;P.;IND;2744\n" +
-"Svidler;Peter;RUS;2765\n" +
-"Le;Quang Liem;VIE;2737\n" +
-"Wojtaszek;Radoslaw;POL;2736\n" +
-"Karjakin;Sergey;RUS;2760\n" +
-"Mamedyarov;Shakhriyar;AZE;2799\n" +
-"Radjabov;Teimour;AZE;2748\n" +
-"Topalov;Veselin;FID;2749\n" +
-"Anand;Viswanathan;IND;2782\n" +
-"Kramnik;Vladimir;RUS;2787\n" +
-"So;Wesley;USA;2788\n" +
-"Yu;Yangyi;CHN;2751\n" +
-"Wei;Yi;CHN;2743";
-        
-        //for (int i=0;i<txt.length;i++) {
-            //String str = txt[i];
-            StringTokenizer strTok = new StringTokenizer(str,";\r\n");
+        System.out.println(nextLine[0]);
+            String str = nextLine[0];
+            StringTokenizer strTok = new StringTokenizer(str,";");
             while (strTok.hasMoreTokens()) {
                 String nom = strTok.nextToken();
+                System.out.println(nom);
                 String prenom = strTok.nextToken();
+                System.out.println("prenom ok");
                 String pays = strTok.nextToken();
+                System.out.println("pays ok");
                 int elo = Integer.parseInt(strTok.nextToken());
+                System.out.println("elo ok");
                 Joueur joueur = new Joueur(nom,prenom,pays,elo);
                 int pos = position(joueur);
                 lst.add(pos, joueur);
             }
-        //}
         return lst;
+        
+     }
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return null;
+        
+        
     }
     
     public static int position (Joueur joueur) {

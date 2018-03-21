@@ -216,6 +216,7 @@ public class FrmNouveau extends java.awt.Frame {
         int age = Integer.parseInt(tfAge.getText());
         Joueur joueur = new Joueur(nom,prenom,nationalite,points);
         mainWin.retourne(joueur);
+        dispose();
     }//GEN-LAST:event_btnEnregistrerActionPerformed
 
     private void tfNomTextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_tfNomTextValueChanged
