@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: elo.JoueurNGTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.502 sec <<< FAILURE!
+testCompareTo(elo.JoueurNGTest)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.AssertionError: expected [1] but found [0]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at elo.JoueurNGTest.testCompareTo(JoueurNGTest.java:78)
+testGetNom(elo.JoueurNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at org.testng.Assert.fail(Assert.java:96)
+	at elo.JoueurNGTest.testGetNom(JoueurNGTest.java:65)
+testGetPoints(elo.JoueurNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at org.testng.Assert.fail(Assert.java:96)
+	at elo.JoueurNGTest.testGetPoints(JoueurNGTest.java:51)
+testToString(elo.JoueurNGTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at org.testng.Assert.fail(Assert.java:96)
+	at elo.JoueurNGTest.testToString(JoueurNGTest.java:94)
+testToText(elo.JoueurNGTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError: The test case is a prototype.
+	at org.testng.Assert.fail(Assert.java:96)
+	at elo.JoueurNGTest.testToText(JoueurNGTest.java:108)

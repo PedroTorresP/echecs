@@ -3,16 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.heg</groupId>
     <artifactId>Echecs-Maven</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <repositories>
-  <repository>
-    <id>jcenter</id>
-    <name>bintray</name>
-    <url>http://jcenter.bintray.com</url>
-  </repository>
-</repositories>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -45,12 +37,6 @@
         <artifactId>slf4j-simple</artifactId>
         <version>1.7.25</version>
     </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>1.9.5</version>
-      <scope>test</scope>
-    </dependency>
     </dependencies>
     <build>
   <plugins>
@@ -74,6 +60,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.3</version>
       </plugin>
+
   </plugins>
 </build>
 <distributionManagement>
@@ -81,11 +68,10 @@
       <id>bintray</id>
       <url>https://api.bintray.com/maven/pedrotorresp/Echecs-Maven</url>
     </repository>
-</distributionManagement>
-<scm>
-    <url>https://github.com/PedroTorresP/echecs</url>
-        <connection>scm:git:git@github.com:PedroTorresP/echecs.git</connection>
-        <developerConnection>scm:git:git@github.com:PedroTorresP/echecs.git</developerConnection>
-    <tag>1.0.1</tag>
-</scm>
+  </distributionManagement>
+           <scm>
+            <url>https://github.com/PedroTorresP/echecs</url>
+            <connection>scm:git:git@github.com:PedroTorresP/echecs.git</connection>
+            <developerConnection>scm:git:git@github.com:PedroTorresP/echecs.git</developerConnection>
+        </scm>
 </project>

@@ -17,13 +17,13 @@ import com.opencsv.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.FileWriter;
+
 //import outils.*;
 /**
  *
  * @author Gabrielp
  */
 public class EchecsDao {
-    
     private static final String JOUEURS = "Joueurs.txt";
     private static ArrayList lst = new ArrayList();
     
