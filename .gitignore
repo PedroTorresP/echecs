@@ -1,4 +1,4 @@
-# exclure tout les .class sauf dans la librairie
-!/Echecs/Lib/outils/*.class
+# exclure tout les .class sauf dans test-classes
+!/Echecs/target/test-classes/elo/*.class
 *.class
 /Echecs/nbproject/private/
