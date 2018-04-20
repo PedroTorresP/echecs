@@ -47,8 +47,6 @@ public class JoueurNGTest {
         int expResult = 1000;
         int result = instance.getPoints();
         assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -61,8 +59,6 @@ public class JoueurNGTest {
         String expResult = "nom";
         String result = instance.getNom();
         assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -73,11 +69,9 @@ public class JoueurNGTest {
         System.out.println("compareTo");
         Object j = new Joueur("nom", "prenom", "nationalite", 1000);
         Joueur instance = new Joueur("nom", "prenom", "nationalite", 1000);
-        int expResult = 1;
+        int expResult = 0;
         int result = instance.compareTo(j);
         assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -90,8 +84,6 @@ public class JoueurNGTest {
         String expResult = "1000 : nom prenom - nationalite";
         String result = instance.toString();
         assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -104,8 +96,6 @@ public class JoueurNGTest {
         String expResult = "nom;prenom;nationalite;1000";
         String result = instance.toText();
         assertEquals(result, expResult);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     
