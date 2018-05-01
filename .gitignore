@@ -1,4 +1,6 @@
 # exclure tout les .class sauf dans test-classes
 !/Echecs/target/test-classes/elo/*.class
 *.class
+target
+*.jar
 /Echecs/nbproject/private/
