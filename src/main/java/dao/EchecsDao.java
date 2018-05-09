@@ -6,19 +6,7 @@
 package dao;
 import java.util.*;
 import elo.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import com.opencsv.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.io.FileWriter;
 
-//import outils.*;
 /**
  *
  * @author Gabrielp
@@ -26,17 +14,12 @@ import java.io.FileWriter;
 public class EchecsDao {
     private static final String JOUEURS = "Joueurs.txt";
     private static ArrayList lst = new ArrayList();
+    private static FileRead read = new FileRead();
+    
+    public EchecsDao(FileRead read) {this.read = read;}
     
     public static ArrayList readEchec() {
-        String [] nextLine;
-        try{
-        CSVReader reader = new CSVReader(new FileReader("Joueurs.csv"), '\n','\r','"');
-        
-        while ((nextLine = reader.readNext()) != null) {
-        // nextLine[] is an array of values from the line
-        System.out.println(nextLine[0]);
-            String str = nextLine[0];
-            StringTokenizer strTok = new StringTokenizer(str,";");
+            StringTokenizer strTok = new StringTokenizer(read.ReadFile(),";");
             while (strTok.hasMoreTokens()) {
                 String nom = strTok.nextToken();
                 System.out.println(nom);
@@ -53,13 +36,7 @@ public class EchecsDao {
         return lst;
         
      }
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        return null;
         
-        
-    }
     
     public static int position (Joueur joueur) {
         for(int i=0;i<lst.size();i++){
@@ -68,13 +45,6 @@ public class EchecsDao {
         }
         return lst.size();
     }
-    public static void writeEchec (String[] liste) {
-        try{
-        CSVWriter writer = new CSVWriter(new FileWriter("Joueurs.csv"), ';');
-     writer.writeNext(liste);
-     writer.close();
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-    }
+
+
 }

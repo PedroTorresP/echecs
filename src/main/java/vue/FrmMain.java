@@ -2,6 +2,7 @@ package vue;
 import static dao.EchecsDao.position;
 import java.util.ArrayList;
 import elo.*;
+import dao.*;
 
 public class FrmMain extends java.awt.Frame {
 private static ArrayList lst = new ArrayList();
@@ -17,13 +18,14 @@ private static ArrayList lst = new ArrayList();
     }
     
         public void fermer() {
+            FileRead file = new FileRead();
         dispose();
         String[] str = new String[lst.size()];
         for(int i=0;i<lst.size();i++){
             Joueur joueur = (Joueur)lst.get(i);
             str[i]=joueur.toText();
         }
-        dao.EchecsDao.writeEchec(str);
+       file.WriteFile(str);
         }
     
     	public void retourne(Joueur joueur) {
