@@ -2,3 +2,4 @@
 !/Echecs/target/test-classes/elo/*.class
 *.class
 /Echecs/nbproject/private/
+/target/
