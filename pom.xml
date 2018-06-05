@@ -5,13 +5,6 @@
     <artifactId>Echecs-Maven</artifactId>
     <version>1.0.1</version>
     <packaging>jar</packaging>
-    <repositories>
-  <repository>
-    <id>jcenter</id>
-    <name>bintray</name>
-    <url>http://jcenter.bintray.com</url>
-  </repository>
-</repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -75,6 +68,11 @@
             </archive>
         </configuration>
       </plugin>
+	  <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.3.0.603</version>
+            </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -109,12 +107,6 @@
             </plugin>
   </plugins>
 </build>
-<distributionManagement>
-    <repository>
-      <id>bintray</id>
-      <url>https://api.bintray.com/maven/pedrotorresp/Echecs-Maven</url>
-    </repository>
-</distributionManagement>
 <scm>
     <url>https://github.com/PedroTorresP/echecs</url>
         <connection>scm:git:git@github.com:PedroTorresP/echecs.git</connection>
