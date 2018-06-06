@@ -5,6 +5,7 @@
  */
 package vue;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -37,6 +38,12 @@ public class FrmNouveauNGTest {
     public void tearDownMethod() throws Exception {
     }
 
+    @Test
+    public void testFrmNouveauNotNull(){
+        FrmNouveau instance = new FrmNouveau();
+        assertThat(instance).isNotNull();
+    }
+    
     /**
      * Test of getInstance method, of class FrmNouveau.
      */
@@ -50,6 +57,8 @@ public class FrmNouveauNGTest {
         assertEquals(result, expResult);*/
 
     }
+    
+
 
     /**
      * Test of valide method, of class FrmNouveau.

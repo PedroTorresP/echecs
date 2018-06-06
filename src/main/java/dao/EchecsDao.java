@@ -12,7 +12,6 @@ import elo.*;
  * @author Gabrielp
  */
 public class EchecsDao {
-    private static final String JOUEURS = "Joueurs.txt";
     private static ArrayList lst = new ArrayList();
     private static FileRead read = new FileRead();
     
@@ -22,13 +21,9 @@ public class EchecsDao {
             StringTokenizer strTok = new StringTokenizer(read.ReadFile(),";");
             while (strTok.hasMoreTokens()) {
                 String nom = strTok.nextToken();
-                System.out.println(nom);
                 String prenom = strTok.nextToken();
-                System.out.println("prenom ok");
                 String pays = strTok.nextToken();
-                System.out.println("pays ok");
                 int elo = Integer.parseInt(strTok.nextToken());
-                System.out.println("elo ok");
                 Joueur joueur = new Joueur(nom,prenom,pays,elo);
                 int pos = position(joueur);
                 lst.add(pos, joueur);

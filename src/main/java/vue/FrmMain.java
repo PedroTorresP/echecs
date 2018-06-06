@@ -1,5 +1,4 @@
 package vue;
-import static dao.EchecsDao.position;
 import java.util.ArrayList;
 import elo.*;
 import dao.*;

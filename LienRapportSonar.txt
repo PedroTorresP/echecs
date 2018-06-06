@@ -1,0 +1,1 @@
+https://sonarcloud.io/dashboard?id=com.heg%3AEchecs-Maven

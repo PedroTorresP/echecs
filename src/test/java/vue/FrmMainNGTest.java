@@ -39,6 +39,12 @@ public class FrmMainNGTest {
     public void tearDownMethod() throws Exception {
     }
 
+    @Test
+    public void frmMainNotNull(){
+        FrmMain instance = new FrmMain();
+        assertThat(instance).isNotNull();
+    }
+    
     /**
      * Test of fermer method, of class FrmMain.
      */
